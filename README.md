@@ -11,6 +11,9 @@ Using `#pragma GCC optimize("Ofast")` will tell the compiler to compile your cod
 ### Array definition
 Originally, I had a for loop that would populate the initial values for the array. While this is a common practice, it isn't very speedy. Instead, for small arrays, it is often better to initialize them by hand (when you can). For larger arrays, I would recommend using `memset()`. This trick had little effect and made my code an eyesore.
 
+### Prefix increment
+While the savings are small, it is slightly faster to use prefix incrementing rather than postfix. There was no noticable difference in speed.
+
 ### Register variables
 In my code, you will notice that I defined a variable `i`, which uses the `register` keyword:
 ```c
