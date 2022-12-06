@@ -32,11 +32,11 @@ int main() {
         if (arr[i] && fprintf(stdout, "%d\n", i));
 
     gettimeofday(&stop, NULL);
-    debug({
+    debug(
         printf("Finished in %fs\n", 
             (double)(stop.tv_usec - start.tv_usec) / 1000000 
             + (double)(stop.tv_sec - start.tv_sec));
-    });
+    );
 
     return 0;
 }
